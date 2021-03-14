@@ -40,10 +40,10 @@ export default class WelcomeScreen extends React.Component {
         return(
             <View style ={styles.container}>
                 <View style = {styles.profileContainer}>
-                    <Text>Book Santa</Text>
+                    <Text style={styles.title}>Book Santa</Text>
                 </View>
 
-                <View>
+                <View style={styles.buttonContainer}>
                     <TextInput 
                     style = {styles.loginBox}
                     placeholder = "Email Address"
@@ -118,9 +118,19 @@ const styles = StyleSheet.create({
         fontWeight:'200',
         fontSize:20
     },
+    buttonContainer:{
+        flex:1,
+        alignItems:'center'
+    },
     profileContainer:{
         flex:1,
         justifyContent:'center',
         alignItems:'center',
-      },
+    },
+    title :{
+        fontSize:65,
+        fontWeight:'300',
+        paddingBottom:30,
+        color : '#ff3d00'
+    },
 });
